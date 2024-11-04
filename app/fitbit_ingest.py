@@ -1002,7 +1002,7 @@ def fitbit_heart_rate_scope():
         try:
 
             resp = fitbit.get(
-                "1/user/-/activities/heart/date/" + date_pulled + "/1d.json"
+                "1/user/-/activities/heart/date/" + date_pulled + "/1d/1min.json"
             )
 
             log.debug("%s: %d [%s]", resp.url, resp.status_code, resp.reason)
@@ -1117,7 +1117,7 @@ def fitbit_heart_rate_scope():
         try:
 
             resp = fitbit.get(
-                "/1/user/-/activities/heart/date/" + date_pulled + "/1d.json"
+                "/1/user/-/activities/heart/date/" + date_pulled + "/1d/1min.json"
             )
 
             log.debug("%s: %d [%s]", resp.url, resp.status_code, resp.reason)
